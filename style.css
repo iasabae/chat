@@ -1,0 +1,118 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000000; /* 전체 배경을 검은색으로 설정 */
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    height: 100vh;
+    overflow: hidden; /* 좌우 스크롤을 없앰 */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #b0d3ec; /* 채팅창의 배경을 하늘색으로 설정 */
+    width: 80%; /* 채팅창이 화면 너비의 80%를 차지 */
+    max-width: 600px; /* 채팅창의 최대 너비를 600px로 제한 */
+    height: 90vh; /* 채팅창이 화면 높이의 90%를 차지 */
+    border-radius: 10px; /* 모서리를 둥글게 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+    overflow: hidden; /* 좌우 스크롤 없앰 */
+}
+
+.chat-thread {
+    flex: 1;
+    padding: 10px 20px;
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: hidden; /* 좌우 스크롤 없앰 */
+    background-color: #b0d3ec; /* 채팅창 내부 배경색 */
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.message.user {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.message.bot {
+    justify-content: flex-start;
+}
+
+.profile {
+    margin-right: 10px;
+}
+
+.message.user .profile {
+    display: none; /* 유저 프로필 이미지 숨김 */
+}
+
+.message.bot .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* 동그란 프로필 이미지 */
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    position: relative;
+    word-wrap: break-word; /* 텍스트가 너무 길면 줄바꿈 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message.user .message-content {
+    background-color: #fff96a; /* 사용자 메시지 색상 */
+    max-width: 70%; /* 사용자 말풍선 너비를 채팅창의 70%로 설정 */
+    margin-right: 0; /* 사용자 말풍선은 오른쪽에 붙음 */
+    margin-left: auto; /* 사용자 메시지를 오른쪽에 붙임 */
+}
+
+.message.bot .message-content {
+    background-color: white; /* 챗봇 메시지 색상 */
+    max-width: 70%; /* 챗봇 말풍선 너비를 채팅창의 70%로 설정 */
+    margin-left: 0; /* 챗봇 말풍선은 왼쪽에 붙음 */
+}
+
+.text {
+    margin: 0;
+    font-size: 14px;
+}
+
+.timestamp {
+    font-size: 10px;
+    color: gray;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.chat-window {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* 채팅창 전체 너비 */
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-window-message {
+    width: calc(100% - 20px);
+    height: 48px;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
