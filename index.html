@@ -1,44 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Interface</title>
-    <link rel="stylesheet" href="style.css"> <!-- CSS 파일 경로 -->
+    <title>전설과의 대화</title>
 </head>
 <body>
 
+<!-- 캐릭터 선택 및 채팅 창 -->
+ <div class="app-container">
+   <div class="left-container">
+    <div class="header">
+     <h1>전설과의 대화</h1>
+     <p class="copyright">made by BAE</p>
+   </div>
+    <div class="character-selection">
+        <div class="character-option active" data-character="1">
+            <img src="https://i.namu.wiki/i/5SrKObt3pZ5ph_Xvwcae0aws7Gtp063pbIKGp0kBmfviJft07IHmsOENzvHsgAR8B7ozNSUDlzp09NDGuULpog.webp" alt="아인슈타인">
+            <span class="character-name">아인슈타인</span>
+        </div>
+        <div class="character-option" data-character="2">
+            <img src="https://ojsfile.ohmynews.com/down/images/1/rheekm_193396_1[248978].jpg" alt="피타고라스">
+            <span class="character-name">피타고라스</span>
+        </div>
+        <div class="character-option" data-character="3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Carl_Friedrich_Gauss.jpg/300px-Carl_Friedrich_Gauss.jpg" alt="가우스">
+            <span class="character-name">가우스</span>
+        </div>
+    </div>
+</div>
+     
     <div class="chat-container">
-        <ul class="chat-thread" id="chat-thread">
-            <!-- 사용자 메시지 -->
-            <li class="message user">
-                <div class="profile">
-                    <!-- 유저 프로필 없음 -->
-                </div>
-                <div class="message-content">
-                    <p class="text">누구세요?</p>
-                    <span class="timestamp">오후 03:09</span>
-                </div>
-            </li>
-
-            <!-- 챗봇 메시지 -->
-            <li class="message bot">
-                <div class="profile">
-                    <img src="https://i.namu.wiki/i/5SrKObt3pZ5ph_Xvwcae0aws7Gtp063pbIKGp0kBmfviJft07IHmsOENzvHsgAR8B7ozNSUDlzp09NDGuULpog.webp" alt="Bot Profile">
-                </div>
-                <div class="message-content">
-                    <p class="text">고독한 타인이 되고픈 남자.. 내 이름은.. 아인슈OO</p>
-                    <span class="timestamp">오후 03:09</span>
-                </div>
-            </li>
-        </ul>
-
-        <!-- 입력창 -->
-        <form class="chat-window" id="chat-form">
-            <input class="chat-window-message" id="chat-window-message" type="text" placeholder="메시지를 입력하세요" autocomplete="off">
+        <ul id="chat-thread" class="chat-thread"></ul>
+        <form id="chat-form" class="chat-window">
+            <input type="text" id="chat-window-message" class="chat-window-message" placeholder="메시지를 입력하세요..." autocomplete='off'>
+            <button type="button" class="upload-btn" id="upload-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/54/54950.png" alt="Upload">
+            </button>
+            <input type="file" id="file-input" style="display: none;" accept="image/*">
         </form>
     </div>
-
-    <script src="script.js"></script> <!-- JS 파일 경로 -->
+</div>
+  
+  <footer>
+        <p>Made by BTY &copy; 2024</p>
+  </footer>
+<script src="script.js"></script>
 </body>
 </html>

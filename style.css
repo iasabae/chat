@@ -1,22 +1,59 @@
 /* 기존 CSS 스타일 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            padding: 0;
-            margin: 0;
-            background-color: #000000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
 
-        .chat-container {
+/* 제목과 저작권 문구 */
+.header {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.header h1 {
+    font-size: 18px;
+    color: white;
+}
+
+.header .copyright {
+    font-size: 10px;
+    color: white;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* 전체 컨테이너를 양쪽으로 배치 */
+.app-container {
+    display: flex;
+    justify-content: space-between; /* 왼쪽과 오른쪽 공간을 적절히 분배 */
+    height: 100vh; /* 화면 전체 높이를 차지 */
+}
+
+/* 왼쪽 컨테이너 - 제목과 캐릭터 선택 */
+.left-container {
+    display: flex;
+    flex-direction: column; /* 제목이 위, 캐릭터가 아래 */
+    justify-content: space-between; /* 제목과 캐릭터 선택 사이 간격 확보 */
+    width: 200px; /* 왼쪽 컨테이너 너비 */
+    background-color: black;
+    padding: 20px;
+    color: white;
+}
+
+/* 오른쪽 컨테이너 - 채팅 창 */
+.chat-container {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -29,158 +66,186 @@
             overflow: hidden;
         }
 
-        .chat-thread {
-            flex: 1;
-            padding: 10px 20px;
-            list-style: none;
-            overflow-y: auto;
-            overflow-x: hidden;
-            background-color: #b0d3ec;
-        }
+.chat-thread {
+  flex: 1;
+  padding: 10px 20px;
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #b0d3ec;
+}
 
-        .message {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
 
-        .message.user {
-            justify-content: flex-end;
-            align-items: flex-start;
-        }
+.message.user {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
 
-        .message.bot {
-            justify-content: flex-start;
-        }
+.message.bot {
+  justify-content: flex-start;
+}
 
-        .profile {
-            margin-right: 10px;
-        }
+.profile {
+  margin-right: 10px;
+}
 
-        .message.user .profile {
-            display: none;
-        }
+.message.user .profile {
+  display: none;
+}
 
-        .message.bot .profile img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
+.message.bot .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
 
-        .message-content {
-            display: flex;
-            flex-direction: column;
-            background-color: white;
-            padding: 10px 15px;
-            border-radius: 10px;
-            position: relative;
-            word-wrap: break-word;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+.message-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  position: relative;
+  word-wrap: break-word;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-        .message.user .message-content {
-            background-color: #fff96a;
-            max-width: 70%;
-            margin-right: 0;
-            margin-left: auto;
-        }
+.message.user .message-content {
+  background-color: #fff96a;
+  max-width: 70%;
+  margin-right: 0;
+  margin-left: auto;
+}
 
-        .message.bot .message-content {
-            background-color: white;
-            max-width: 70%;
-            margin-left: 0;
-        }
+.message.bot .message-content {
+  background-color: white;
+  max-width: 70%;
+  margin-left: 0;
+}
 
-        .text {
-            margin: 0;
-            font-size: 14px;
-        }
+.text {
+  margin: 0;
+  font-size: 14px;
+}
 
-        .timestamp {
-            font-size: 10px;
-            color: gray;
-            margin-top: 5px;
-            text-align: right;
-        }
+.timestamp {
+  font-size: 10px;
+  color: gray;
+  margin-top: 5px;
+  text-align: right;
+}
 
-        .chat-window {
-            position: sticky;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #ffffff;
-            padding: 10px;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-        }
+.chat-window {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
 
-        .chat-window-message {
-            flex-grow: 1;
-            height: 48px;
-            font-size: 16px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
-        }
+.chat-window-message {
+  flex-grow: 1;
+  height: 48px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
 
-        /* 새로운 CSS 스타일 */
-        .app-container {
-            display: flex;
-            width: 100%;
-            height: 100vh;
-            justify-content: center;
-            align-items: center;
-        }
+/* 새로운 CSS 스타일 */
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
 
-        .character-selection {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            margin-right: 20px;
-        }
+.character-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  margin-right: 20px;
+}
 
-        .character-option {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 10px 0;
-            cursor: pointer;
-            border: 6px solid transparent;
-            transition: border-color 0.3s ease;
-        }
+.character-option {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px 0;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: border-color 0.3s ease;
+}
 
-        .character-option.active {
-            border-color: #FFC0CB;
-        }
 
-        .character-name {
-            margin-top: 5px;
-            color: white;
-            font-weight: bold;
-        }
 
-        .chat-container {
-            flex-grow: 1;
-        }
+.chat-container {
+  flex-grow: 1;
+}
 
-        .upload-btn {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            margin-left: 10px;
-        }
+.upload-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
 
-        .upload-btn img {
-            width: 24px;
-            height: 24px;
-        }
+.upload-btn img {
+  width: 24px;
+  height: 24px;
+}
 
-        .uploaded-image {
-            max-width: 100%;
-            max-height: 200px;
-            margin-top: 10px;
-        }
+.uploaded-image {
+  max-width: 70%;
+  height: auto;
+}
+
+.character-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.character-option img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.character-name {
+  margin-top: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+
+.character-option.active img {
+  border: 4px solid white;
+  border-color: #FFC0CB;
+}
+.upload-btn.file-selected img {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
