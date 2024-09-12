@@ -137,6 +137,9 @@
                         data: uploadedImage.split(',')[1]
                     }
                 });
+
+               // 이미지 데이터가 포함되었는지 확인하는 로그 출력
+        console.log("이미지 포함된 requestBody:", requestBody);
             }
 
             return requestBody;
