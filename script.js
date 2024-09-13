@@ -88,7 +88,7 @@
         });
 
         const data = await response.json();
-        console.log("API 응답 데이터:", data);
+        // console.log("API 응답 데이터:", data);
 
         if (data && data.candidates && data.candidates.length > 0 && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts.length > 0) {
             const botResponse = data.candidates[0].content.parts[0].text.trim();
@@ -139,7 +139,7 @@
                 });
 
                // 이미지 데이터가 포함되었는지 확인하는 로그 출력
-        console.log("이미지 포함된 requestBody:", requestBody);
+        // console.log("이미지 포함된 requestBody:", requestBody);
             }
 
             return requestBody;
