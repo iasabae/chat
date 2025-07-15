@@ -1,49 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>전설과의 대화</title>
-    <link rel="stylesheet" href="style.css"> <!-- style.css 파일을 연결 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- 캐릭터 선택 및 채팅 창 -->
- <div class="app-container">
-   <div class="left-container">
-    <div class="header">
-     <h1>전설과의 대화</h1>
-     <p class="copyright">made by BAE</p>
-   </div>
-    <div class="character-selection">
-        <div class="character-option active" data-character="1">
-            <img src="https://i.namu.wiki/i/5SrKObt3pZ5ph_Xvwcae0aws7Gtp063pbIKGp0kBmfviJft07IHmsOENzvHsgAR8B7ozNSUDlzp09NDGuULpog.webp" alt="아인슈타인">
-            <span class="character-name">아인슈타인</span>
+    <!-- 캐릭터 선택 및 채팅 창 -->
+    <div class="app-container">
+        <div class="left-container">
+            <div class="header">
+                <h1>전설과의 대화</h1>
+                <p class="copyright">made by BAE</p>
+            </div>
+            <div class="character-selection">
+                <div class="character-option active" data-character="1">
+                    <img src="https://i.namu.wiki/i/5SrKObt3pZ5ph_Xvwcae0aws7Gtp063pbIKGp0kBmfviJft07IHmsOENzvHsgAR8B7ozNSUDlzp09NDGuULpog.webp" alt="아인슈타인">
+                    <span class="character-name">아인슈타인</span>
+                </div>
+                <div class="character-option" data-character="2">
+                    <img src="https://ojsfile.ohmynews.com/down/images/1/rheekm_193396_1[248978].jpg" alt="피타고라스">
+                    <span class="character-name">피타고라스</span>
+                </div>
+                <div class="character-option" data-character="3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Carl_Friedrich_Gauss.jpg/300px-Carl_Friedrich_Gauss.jpg" alt="가우스">
+                    <span class="character-name">가우스</span>
+                </div>
+            </div>
         </div>
-        <div class="character-option" data-character="2">
-            <img src="https://ojsfile.ohmynews.com/down/images/1/rheekm_193396_1[248978].jpg" alt="피타고라스">
-            <span class="character-name">피타고라스</span>
-        </div>
-        <div class="character-option" data-character="3">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Carl_Friedrich_Gauss.jpg/300px-Carl_Friedrich_Gauss.jpg" alt="가우스">
-            <span class="character-name">가우스</span>
+        
+        <div class="chat-container">
+            <ul id="chat-thread" class="chat-thread"></ul>
+            <form id="chat-form" class="chat-window">
+                <input type="text" id="chat-window-message" class="chat-window-message" placeholder="메시지를 입력하세요..." autocomplete="off">
+                <button type="button" class="upload-btn" id="upload-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/54/54950.png" alt="Upload">
+                </button>
+                <input type="file" id="file-input" style="display: none;" accept="image/*">
+            </form>
         </div>
     </div>
-</div>
-     
-    <div class="chat-container">
-        <ul id="chat-thread" class="chat-thread"></ul>
-        <form id="chat-form" class="chat-window">
-            <input type="text" id="chat-window-message" class="chat-window-message" placeholder="메시지를 입력하세요..." autocomplete='off'>
-            <button type="button" class="upload-btn" id="upload-btn">
-                <img src="https://cdn-icons-png.flaticon.com/512/54/54950.png" alt="Upload">
-            </button>
-            <input type="file" id="file-input" style="display: none;" accept="image/*">
-        </form>
-    </div>
-</div>
-  
-  <footer>
+    
+    <footer>
         <p>Made by BTY &copy; 2024</p>
-  </footer>
-<script src="script.js"></script>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

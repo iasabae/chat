@@ -1,0 +1,39 @@
+# 환경변수 파일
+.env
+.env.local
+.env.production
+
+# API 키 파일
+*.key
+api-keys.txt
+
+# 로그 파일
+*.log
+logs/
+
+# 임시 파일
+*.tmp
+*.temp
+
+# OS 생성 파일
+.DS_Store
+Thumbs.db
+
+# IDE 설정
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node.js (만약 사용한다면)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (만약 사용한다면)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
